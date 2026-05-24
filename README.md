@@ -57,7 +57,7 @@
 ### 2. Клонування репозиторію
 
 ```bash
-git clone https://github.com/manoilokate/diploma-ecommerce-chatbot.git
+git clone https://github.com/manoilokate/Diploma-ecommerce-chatbot.git
 cd diploma-ecommerce-chatbot
 ```
 
