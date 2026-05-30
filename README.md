@@ -112,14 +112,17 @@ Name: DiplomaWrite    Value: hf_xxxxxxxxxxxxxxx
 2. `diploma-model-comparison.ipynb` — тестування донавчених моделей за 62 сценаріями (~30 хвилин)
 3. `diploma-demo.ipynb` — запускає Gradio-інтерфейс; у виводі останньої клітинки з'явиться публічне посилання виду `https://xxxx.gradio.live` — відкрити його у браузері
 
-**Побудова графіків втрат (локально):**
+**Побудова графіків втрат (локально, через VS Code):**
 
-`plot_loss.py` запускається локально на вашому комп'ютері — дані втрат вже вшиті у скрипт як константи (результати реального тренування). Потребує лише встановленого `matplotlib`:
+`plot_loss.py` запускається локально на вашому комп'ютері — дані втрат вже вшиті у скрипт як константи (результати реального тренування).
 
-```bash
-pip install matplotlib
-python plot_loss.py
-```
+1. Встановити [Visual Studio Code](https://code.visualstudio.com) та розширення [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+2. Встановити залежність:
+   ```bash
+   pip install matplotlib
+   ```
+3. Відкрити файл `plot_loss.py` у VS Code
+4. Натиснути кнопку `▶ Run Python File` у верхньому правому куті редактора (або `F5`)
 
 Результат зберігається у файл `loss_curves.png` у поточній папці.
 
