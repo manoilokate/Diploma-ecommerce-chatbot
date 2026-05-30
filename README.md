@@ -197,12 +197,11 @@ Name: DiplomaWrite    Value: hf_xxxxxxxxxxxxxxx
 
 ## 📷 Приклади / скриншоти
 
-- Загальний вигляд демонстраційного інтерфейсу
-- Готові приклади запитів (Sample prompts)
-- Панель бази даних емулятора (Database snapshot)
-- Поведінка моделей у чотирьох конфігураціях (Pure LLM, +Templates, +State Machine, +Both)
+- Загальний вигляд демонстраційного інтерфейсу - `demo_main_screen.jpg`
+- Готові приклади запитів (Sample prompts) - `demo_examples_screen.jpg`
+- Панель бази даних емулятора (Database snapshot) - `demo_db_schema_screen_1.jpg` і `demo_db_schema_screen_2.jpg`
 
-(скріни наведено у пояснювальній записці)
+Всі знаходяться у папці `/screenshots/`.
 
 ---
 
