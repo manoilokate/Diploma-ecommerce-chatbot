@@ -49,48 +49,79 @@
 
 ### 1. Встановлення інструментів
 
-- Python 3.10 або новіший
-- CUDA-сумісний GPU (для тренування — мінімум 15 GB VRAM, наприклад Tesla T4)
-- Обліковий запис на HuggingFace для завантаження моделей
-- Обліковий запис на Kaggle (рекомендовано для безкоштовного GPU)
+- Обліковий запис на [Kaggle](https://www.kaggle.com) — для запуску всіх ноутбуків з безкоштовним GPU Tesla T4
+- Обліковий запис на [HuggingFace](https://huggingface.co) — для зчитування моделей та завантаження донавчених версій
 
 ### 2. Клонування репозиторію
 
 ```bash
 git clone https://github.com/manoilokate/Diploma-ecommerce-chatbot.git
-cd diploma-ecommerce-chatbot
+cd Diploma-ecommerce-chatbot
 ```
 
-### 3. Встановлення залежностей
+### 3. Завантаження файлів у Kaggle
 
-```bash
-pip install "unsloth[kaggle-new] @ git+https://github.com/unslothai/unsloth.git"
-pip install "transformers==5.3.0" "trl>=0.18.2,<=0.24.0,!=0.19.0"
-pip install rouge-score bert-score nltk sentence-transformers
-pip install gradio matplotlib pandas
-```
+1. Зайти на [kaggle.com](https://www.kaggle.com) → `Code` → `New Notebook`
+2. У відкритому ноутбуці натиснути `File` (верхній лівий кут) → `Import Notebook` → вибрати файл з локального репозиторію:
+   - спочатку завантажити `diploma-model-training.ipynb`
+   - потім аналогічно — `diploma-model-comparison.ipynb` та `diploma-demo.ipynb`
+3. Завантажити датасет як окремий ресурс Kaggle:
+   - перейти на [kaggle.com/datasets](https://www.kaggle.com/datasets) → `New Dataset`
+   - завантажити файл `ecommerce_function_calling_12000.json` → назвати датасет `ecommerce-function-calling-12000` → `Create`
+   - у ноутбуці натиснути `+ Add Input` (права панель) → `Datasets` → знайти щойно створений датасет і додати його
+4. Увімкнути GPU у налаштуваннях ноутбука: верхня панель → `Settings` → `Accelerator → GPU T4 x2` 
 
 ### 4. Налаштування токенів HuggingFace
 
-Створити секрети у Kaggle або змінні середовища:
+**Крок 4.1 — Створити токени на HuggingFace:**
+
+1. Зайти на [huggingface.co](https://huggingface.co) → `Profile` → `Settings` → `Access Tokens` → `New token`
+2. Створити **перший токен** (`HF_TOKEN`):
+   - Name: `HF_TOKEN`
+   - Role: `Read` (достатньо для завантаження моделей)
+   - Натиснути `Generate token` → скопіювати значення
+3. Створити **другий токен** (`DiplomaWrite`):
+   - Name: `DiplomaWrite`
+   - Role: `Write` (потрібен для завантаження донавчених моделей на Hub)
+   - Натиснути `Generate token` → скопіювати значення
+
+**Крок 4.2 — Додати токени у Kaggle Secrets:**
+
+1. У Kaggle Notebook натиснути `Add-ons` (верхнє меню) → `Secrets`
+2. Натиснути `Add a new secret` і додати два записи:
 
 ```
-HF_TOKEN=hf_xxxxxxxxxxxxxxx        # для завантаження моделей
-DiplomaWrite=hf_xxxxxxxxxxxxxxx    # для завантаження донавчених моделей на Hub
+Name: HF_TOKEN        Value: hf_xxxxxxxxxxxxxxx
+Name: DiplomaWrite    Value: hf_xxxxxxxxxxxxxxx
 ```
+
+3. Для кожного секрету увімкнути перемикач `Attach to notebook`
 
 ### 5. Запуск
 
+Послідовно запускати ноутбуки у Kaggle — усі необхідні залежності встановлюються автоматично у першій клітинці кожного ноутбука.
+
+Для кожного ноутбука:
+1. Відкрити ноутбук у Kaggle
+2. Переконатись, що GPU увімкнено: верхня панель → `Settings` → `Accelerator → GPU T4 x2`
+3. Натиснути `Run All` (`▶▶` або `Run` → `Run All`) — Kaggle запустить усі клітинки послідовно
+
+**Порядок запуску:**
+
+1. `diploma-model-training.ipynb` — донавчання моделей (~6–8 годин на одну модель з 3 епохами на GPU Tesla T4); після завершення донавчені моделі автоматично зберігаються на HuggingFace Hub
+2. `diploma-model-comparison.ipynb` — тестування донавчених моделей за 62 сценаріями (~30 хвилин)
+3. `diploma-demo.ipynb` — запускає Gradio-інтерфейс; у виводі останньої клітинки з'явиться публічне посилання виду `https://xxxx.gradio.live` — відкрити його у браузері
+
+**Побудова графіків втрат (локально):**
+
+`plot_loss.py` запускається локально на вашому комп'ютері — дані втрат вже вшиті у скрипт як константи (результати реального тренування). Потребує лише встановленого `matplotlib`:
+
 ```bash
-# Тренування моделей (на Kaggle з GPU Tesla T4)
-jupyter notebook diploma-qwen2-7b-training.ipynb
-
-# Порівняльне тестування донавчених моделей
-jupyter notebook diploma-model-comparison.ipynb
-
-# Демонстраційний інтерфейс
-jupyter notebook diploma-demo.ipynb
+pip install matplotlib
+python plot_loss.py
 ```
+
+Результат зберігається у файл `loss_curves.png` у поточній папці.
 
 ---
 
