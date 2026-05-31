@@ -241,21 +241,21 @@ Name: DiplomaWrite    Value: hf_xxxxxxxxxxxxxxx
 
 ## 🧾 Використані джерела / література
 
-- Average e-commerce spending per online shopper worldwide per visit in the 4th quarter of 2025, by category — statista.com/statistics/239288/countries-ranked-by-average-b2c-e-commerce-spending-per-online-buyer
-- Vaswani et al., "Attention Is All You Need", NeurIPS 2017 — proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
-- Qwen Team, "Qwen2.5: A Party of Foundation Models" — qwen.ai/blog?id=qwen2.5
-- Qwen2.5-1.5B-Instruct — huggingface.co/Qwen/Qwen2.5-1.5B-Instruct
-- Meta AI, "Llama 3.2: Revolutionizing edge AI and vision with open, customizable models" — ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices
-- Llama-3.2-1B-Instruct — huggingface.co/meta-llama/Llama-3.2-1B-Instruct
-- Hu et al., "LoRA: Low-Rank Adaptation of Large Language Models", arXiv:2106.09685
-- Dettmers et al., "QLoRA: Efficient Finetuning of Quantized LLMs", arXiv:2305.14314
-- Unsloth Documentation — unsloth.ai/docs/basics/api
-- HuggingFace TRL, SFT Trainer — huggingface.co/docs/trl/sft_trainer
-- Bitext Customer Support LLM Chatbot Training Dataset — huggingface.co/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset
-- ToolBench — github.com/OpenBMB/ToolBench
-- Salesforce, xLAM-60k — huggingface.co/datasets/Salesforce/xlam-function-calling-60k
-- Xu et al., "A Survey on Knowledge Distillation of Large Language Models", arXiv:2402.13116
-- Dettmers et al., "8-bit Optimizers via Block-wise Quantization", arXiv:2110.02861
-- Wang et al., "A Survey on Large Language Model based Autonomous Agents", arXiv:2308.11432
+- Average e-commerce spending per online shopper worldwide per visit in the 4th quarter of 2025, by category — [statista.com](https://www.statista.com/statistics/239288/countries-ranked-by-average-b2c-e-commerce-spending-per-online-buyer)
+- Vaswani et al., "Attention Is All You Need", NeurIPS 2017 — [proceedings.neurips.cc](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
+- Qwen Team, "Qwen2.5: A Party of Foundation Models" — [qwen.ai](https://qwen.ai/blog?id=qwen2.5)
+- Qwen2.5-1.5B-Instruct — [huggingface.co/Qwen/Qwen2.5-1.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct)
+- Meta AI, "Llama 3.2: Revolutionizing edge AI and vision with open, customizable models" — [ai.meta.com](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices)
+- Llama-3.2-1B-Instruct — [huggingface.co/meta-llama/Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct)
+- Hu et al., "LoRA: Low-Rank Adaptation of Large Language Models", arXiv:2106.09685 — [arxiv.org](https://arxiv.org/abs/2106.09685)
+- Dettmers et al., "QLoRA: Efficient Finetuning of Quantized LLMs", arXiv:2305.14314 — [arxiv.org](https://arxiv.org/abs/2305.14314)
+- Unsloth Documentation — [unsloth.ai](https://unsloth.ai/docs/basics/api)
+- HuggingFace TRL, SFT Trainer — [huggingface.co/docs/trl/sft_trainer](https://huggingface.co/docs/trl/sft_trainer)
+- Bitext Customer Support LLM Chatbot Training Dataset — [huggingface.co/datasets/bitext](https://huggingface.co/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset)
+- ToolBench — [github.com/OpenBMB/ToolBench](https://github.com/OpenBMB/ToolBench)
+- Salesforce, xLAM-60k — [huggingface.co/datasets/Salesforce](https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k)
+- Xu et al., "A Survey on Knowledge Distillation of Large Language Models", arXiv:2402.13116 — [arxiv.org](https://arxiv.org/abs/2402.13116)
+- Dettmers et al., "8-bit Optimizers via Block-wise Quantization", arXiv:2110.02861 — [arxiv.org](https://arxiv.org/abs/2110.02861)
+- Wang et al., "A Survey on Large Language Model based Autonomous Agents", arXiv:2308.11432 — [arxiv.org](https://arxiv.org/abs/2308.11432)
 
 ---
