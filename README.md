@@ -45,7 +45,29 @@
 
 ---
 
-## ▶️ Як запустити проєкт «з нуля»
+## ▶️ Як запустити проєкт
+
+### 🚀 Варіант А — Швидкий старт (тестування готових моделей)
+
+Для тих, хто хоче одразу побачити результат без тренування (~5 хвилин налаштування):
+
+> Токени HuggingFace **не потрібні** — донавчені моделі є у відкритому доступі:
+> - Qwen: [manoilokate/qwen2.5-1.5b-ecommerce-v2](https://huggingface.co/manoilokate/qwen2.5-1.5b-ecommerce-v2)
+> - Llama: [manoilokate/llama-3.2-1b-ecommerce-v3](https://huggingface.co/manoilokate/llama-3.2-1b-ecommerce-v3)
+
+1. Створити обліковий запис на [Kaggle](https://www.kaggle.com) (якщо ще немає)
+2. Клонувати репозиторій:
+   ```bash
+   git clone https://github.com/manoilokate/Diploma-ecommerce-chatbot.git
+   ```
+3. Зайти на [kaggle.com](https://www.kaggle.com) → `Code` → `New Notebook`
+3. Натиснути `File` → `Import Notebook` → завантажити файл `diploma-demo.ipynb`
+5. Увімкнути GPU: `Settings` → `Accelerator → GPU T4 x2`
+6. Натиснути `Run All` — у виводі останньої клітинки з'явиться публічне посилання виду `https://xxxx.gradio.live`, відкрити його у браузері
+
+---
+
+### 🔬 Варіант Б — Повний запуск (донавчання з нуля)
 
 ### 1. Встановлення інструментів
 
