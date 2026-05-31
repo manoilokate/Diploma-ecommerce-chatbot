@@ -128,6 +128,16 @@ Name: DiplomaWrite    Value: hf_xxxxxxxxxxxxxxx
 2. Переконатись, що GPU увімкнено: верхня панель → `Settings` → `Accelerator → GPU T4 x2`
 3. Натиснути `Run All` (`▶▶` або `Run` → `Run All`) — Kaggle запустить усі клітинки послідовно
 
+**Датасет для тренування:**
+
+Використати готовий файл `ecommerce_function_calling_12000.json` з репозиторію — або згенерувати власний за допомогою скрипту `dataset_generation.py` (локально, жодних API ключів не потрібно — дані генеруються програмно):
+
+```bash
+python dataset_generation.py
+```
+
+Отриманий файл завантажити у Kaggle як датасет (див. крок 3 вище).
+
 **Порядок запуску:**
 
 1. `diploma-model-training.ipynb` — донавчання моделей (~6–8 годин на одну модель з 3 епохами на GPU Tesla T4); після завершення донавчені моделі автоматично зберігаються на HuggingFace Hub
